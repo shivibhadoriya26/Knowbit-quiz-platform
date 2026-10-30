@@ -1,4 +1,3 @@
-
 data/
 login.txt
 registration.txt
@@ -6,4 +5,3 @@ results.txt
 .venv/
 __pycache__/
 *.pyc
-

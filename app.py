@@ -555,16 +555,6 @@ with logout_col:
         st.session_state.quiz_submitted = False
         st.session_state.last_result = None
         st.rerun()
-# ---------- SHARED HEADER ----------
-show_brand()
-st.markdown("""
-<div class="hero">
-    <div class="eyebrow">YOUR LEARNING SPACE</div>
-    <h1>Learn smarter.<br>Build confidence.</h1>
-    <p>Practice technical concepts, test your knowledge,
-    and track your progress — one question at a time.</p>
-</div>
-""", unsafe_allow_html=True)
 
 
 descriptions = {

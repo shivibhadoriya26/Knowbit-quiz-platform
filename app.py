@@ -547,7 +547,7 @@ with header_col:
     st.caption(f"Welcome, **{display_name}**")
 
 with logout_col:
-    if st.button("Log out", key="logout_button"):
+    if st.button("Log out", key="header_logout_button"):
         st.session_state.current_user = None
         st.session_state.auth_view = "login"
         st.session_state.screen = "auth"
@@ -598,7 +598,7 @@ if st.session_state.screen == "dashboard":
         column = col1 if index % 2 == 0 else col2
         with column:
             st.markdown(
-                f"""
+               f"""
                 <div class="quiz-card">
                     <div class="quiz-number">{category}</div>
                     <h3>{title}</h3>
@@ -606,12 +606,7 @@ if st.session_state.screen == "dashboard":
                 </div>
                 """,
                 unsafe_allow_html=True
-            )
-            if st.button(f"Start {subject} quiz", key=f"start_{subject}"):
-                st.session_state.selected_quiz = subject
-                st.session_state.quiz_submitted = False
-                st.session_state.screen = "quiz"
-                st.rerun()
+            ) 
 
     # Personal progress summary
     st.divider()
@@ -1269,7 +1264,7 @@ with user_col:
     )
 
 with logout_col:
-    if st.button("Log out", key="logout_button"):
+    if st.button("Log out", key="dashboard_logout_button"):
         st.session_state.current_user = None
         st.session_state.selected_quiz = None
         st.session_state.quiz_submitted = False
